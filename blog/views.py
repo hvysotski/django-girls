@@ -15,7 +15,7 @@ def post_detail(request, pk):
     return render(request, 'blog/post_detail.html', {'post': post})
 
 
-@login_required(login_url='/login')
+@login_required(login_url='/admin')
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
